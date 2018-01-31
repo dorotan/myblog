@@ -101,3 +101,4 @@ ENV/
 # mypy
 .mypy_cache/
 simple_blog/db.sqlite3
+simple_blog/blog/migrations/0003_post_tags.py
