@@ -45,6 +45,13 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS', bool, default=False)
 # Application definition
 SITE_ID = 1
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/blog'
+    },
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,6 +63,7 @@ INSTALLED_APPS = [
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'haystack',
 ]
 
 MIDDLEWARE = [
